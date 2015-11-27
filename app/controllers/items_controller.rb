@@ -7,6 +7,17 @@ class ItemsController < ApplicationController
     redirect_to @list
   end
 
+  def destroy
+    @item = @list.items.find(params[:id])
+    if @item.destroy
+      flash[:success] = "Item successfully deleted."
+    else
+      flash[:error] = "Item could not be deleted."
+    end
+
+    redirect_to @list
+  end
+
   private
 
   def set_list
