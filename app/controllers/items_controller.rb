@@ -19,8 +19,8 @@ class ItemsController < ApplicationController
   end
 
   def complete
-    @item.update_attribute(:completed_at, Time.now)
-
+    @item.toggle_completion
+    
     redirect_to @list, notice: "Item completed."
   end
 
