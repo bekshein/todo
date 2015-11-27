@@ -10,5 +10,12 @@
   <%= @list.description %>
 </p>
 
+<div>
+	<%= render @list.items %>
+	<div>
+		<%= render "items/form" %>
+	</div>
+</div>
+
 <%= link_to 'Edit', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>
