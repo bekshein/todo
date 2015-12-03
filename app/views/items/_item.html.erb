@@ -9,7 +9,7 @@
       <p style="opacity: 0.4;"><strike><%= item.content %></strike></p>
     </div>
     <div class="trash">
-      <%= link_to list_item_path(@list, item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <%= link_to list_item_path(@list, item.id), method: :delete do %>
         <i class="fa fa-trash"></i>
       <% end %>
     </div>
@@ -23,7 +23,7 @@
       <p><%= item.content %></p>
     </div>
     <div class="trash">
-      <%= link_to list_item_path(@list, item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <%= link_to list_item_path(@list, item.id), method: :delete do %>
         <i class="fa fa-trash"></i>
       <% end %>
     </div>
